@@ -1,0 +1,86 @@
+''LCEL stands for LangChain Expression Language.''
+
+It's a way to connect LangChain components together using a simple pipeline syntax.
+
+Think of it like Unix pipes:
+
+cat file.txt | grep python | sort
+
+Output from one step becomes input to the next.
+
+LCEL does the same thing for AI applications.
+
+Without LCEL
+
+You manually write:
+
+results = retriever.invoke(query)
+
+context = "\n".join(
+    [doc.page_content for doc in results]
+)
+
+prompt = f"""
+Context:
+{context}
+
+Question:
+{query}
+"""
+
+response = llm.invoke(prompt)
+
+answer = response.content
+
+You're controlling every step.
+
+With LCEL
+
+You define the pipeline once:
+
+chain = (
+    retriever
+    | prompt
+    | llm
+    | StrOutputParser()
+)
+
+Then run:
+
+answer = chain.invoke("What is Python?")
+
+That's it.
+
+
+====================================================================================================================
+
+Visual Representation
+User Question
+      │
+      ▼
+  Retriever
+      │
+      ▼
+ Retrieved Docs
+      │
+      ▼
+ Prompt Template
+      │
+      ▼
+     LLM
+      │
+      ▼
+ Output Parser
+      │
+      ▼
+ Final Answer
+
+LCEL lets you write this as:
+
+retriever | prompt | llm | parser
+
+instead of manually wiring everything.
+=================================================================================================================
+LCEL (LangChain Expression Language) is LangChain's declarative way of composing AI workflows. 
+It allows components such as retrievers, prompt templates, language models, and output parsers 
+to be connected using the | operator, creating reusable and modular chains.
