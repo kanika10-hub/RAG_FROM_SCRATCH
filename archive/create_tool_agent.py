@@ -49,7 +49,9 @@ tools = {
 question = input("Ask something: ")
 
 tool_prompt = f"""
-You are a tool selector.
+You are a helpful assistant .
+answer normall using your own knowledge and reasoning.
+only use following tools when they are actually needed.
 
 Available tools:
 

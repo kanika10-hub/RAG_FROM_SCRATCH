@@ -2,6 +2,8 @@
 from langchain_core.tools import tool
 from langchain.agents import create_agent
 from langchain_google_genai import ChatGoogleGenerativeAI
+from langgraph.checkpoint.memory import MemorySaver
+
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -22,7 +24,8 @@ def word_count(text: str):
     return str(len(text.split()))
 
 #for chat history
-chat_history = []
+#chat_history = []
+memory = MemorySaver()
 
 tools = [calculator, uppercase, word_count]
 
@@ -32,7 +35,8 @@ chat_model = ChatGoogleGenerativeAI(
 
 agent = create_agent(
     model=chat_model,
-    tools=tools
+    tools=tools,
+    checkpointer=memory
 )
 
 while True:
@@ -41,16 +45,40 @@ while True:
     if query.lower() == "exit":
         break
 
-    chat_history.append(("user", query))
+    
 
     response = agent.invoke(
-        {
-            "messages": chat_history
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": """
+You are a helpful AI assistant.
+Use tools only when necessary.
+Answer normally for general questions.
+Use memory to remember previous conversations.
+"""
+            },
+            {
+                "role": "user",
+                "content": query
+            }
+        ]
+    },
+    config={
+        "configurable": {
+            "thread_id": "user1"
         }
-    )
+    }
+)
 
     answer = response["messages"][-1].content
 
     print("Agent:", answer)
 
-    chat_history.append(("assistant", answer))
+    
+
+
+
+
+
