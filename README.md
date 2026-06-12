@@ -10,7 +10,7 @@ Every user query flows through a LangGraph workflow. Conversation history is sto
 
 The memory belongs to the graph itself rather than any specific UI.
 
-![Architecture Diagram](image.png)
+
 
 ---
 
