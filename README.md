@@ -1,6 +1,6 @@
 
 
-#  RAG Portfolio phase -3
+#  RAG  phase -3
 
 
 An evolving Retrieval-Augmented Generation (RAG) system built with LangGraph and Gemini, progressing phase-by-phase from a basic RAG pipeline to a production-style multi-agent system. Each phase is tagged in Git, making the repository both a working project and a documented learning journey.
