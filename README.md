@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
 #  RAG Portfolio phase -3
 
@@ -16,22 +14,7 @@ Every user query flows through a LangGraph workflow. Conversation history is sto
 The memory belongs to the graph itself rather than any specific UI.
 
 
-=======
-#  RAG Portfolio phase -3
 
-An evolving Retrieval-Augmented Generation (RAG) system built with LangGraph and Gemini, progressing phase-by-phase from a basic RAG pipeline to a production-style multi-agent system. Each phase is tagged in Git, making the repository both a working project and a documented learning journey.
-
-**Current Status:** Phase 3 — Persistent Memory + Chat UI
-
-## Architecture
-
-Every user query flows through a LangGraph workflow. Conversation history is stored in a SQLite checkpointer using a unique `thread_id`, allowing memory to persist across application restarts and remain shared between both the CLI and Streamlit interfaces.
-
-The memory belongs to the graph itself rather than any specific UI.
-
-![Architecture Diagram](image.png)
->>>>>>> 9bc1d9e (Phase 3: persistent memory, Streamlit UI, mock LLM mode, latency instrumentation)
-=======
 #  RAG Portfolio phase -3
 
 An evolving Retrieval-Augmented Generation (RAG) system built with LangGraph and Gemini, progressing phase-by-phase from a basic RAG pipeline to a production-style multi-agent system. Each phase is tagged in Git, making the repository both a working project and a documented learning journey.
@@ -45,8 +28,8 @@ Every user query flows through a LangGraph workflow. Conversation history is sto
 The memory belongs to the graph itself rather than any specific UI.
 
 ![Architecture Diagram](image.png)
->>>>>>> 9bc1d9e (Phase 3: persistent memory, Streamlit UI, mock LLM mode, latency instrumentation)
-=======
+
+
 #  RAG Portfolio phase -3
 
 An evolving Retrieval-Augmented Generation (RAG) system built with LangGraph and Gemini, progressing phase-by-phase from a basic RAG pipeline to a production-style multi-agent system. Each phase is tagged in Git, making the repository both a working project and a documented learning journey.
@@ -60,7 +43,35 @@ Every user query flows through a LangGraph workflow. Conversation history is sto
 The memory belongs to the graph itself rather than any specific UI.
 
 ![Architecture Diagram](image.png)
->>>>>>> 9bc1d9e (Phase 3: persistent memory, Streamlit UI, mock LLM mode, latency instrumentation)
+
+
+#  RAG Portfolio phase -3
+
+An evolving Retrieval-Augmented Generation (RAG) system built with LangGraph and Gemini, progressing phase-by-phase from a basic RAG pipeline to a production-style multi-agent system. Each phase is tagged in Git, making the repository both a working project and a documented learning journey.
+
+**Current Status:** Phase 3 — Persistent Memory + Chat UI
+
+## Architecture
+
+Every user query flows through a LangGraph workflow. Conversation history is stored in a SQLite checkpointer using a unique `thread_id`, allowing memory to persist across application restarts and remain shared between both the CLI and Streamlit interfaces.
+
+The memory belongs to the graph itself rather than any specific UI.
+
+![Architecture Diagram](image.png)
+
+#  RAG Portfolio phase -3
+
+An evolving Retrieval-Augmented Generation (RAG) system built with LangGraph and Gemini, progressing phase-by-phase from a basic RAG pipeline to a production-style multi-agent system. Each phase is tagged in Git, making the repository both a working project and a documented learning journey.
+
+**Current Status:** Phase 3 — Persistent Memory + Chat UI
+
+## Architecture
+
+Every user query flows through a LangGraph workflow. Conversation history is stored in a SQLite checkpointer using a unique `thread_id`, allowing memory to persist across application restarts and remain shared between both the CLI and Streamlit interfaces.
+
+The memory belongs to the graph itself rather than any specific UI.
+
+![Architecture Diagram](image.png)
 
 ---
 

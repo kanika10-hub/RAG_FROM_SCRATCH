@@ -2,17 +2,8 @@
 .venv/
 __pycache__/
 chroma_db/
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 llm_cache.db
 checkpoints.db
-=======
-llm_cache.db
->>>>>>> 9bc1d9e (Phase 3: persistent memory, Streamlit UI, mock LLM mode, latency instrumentation)
-=======
-llm_cache.db
->>>>>>> 9bc1d9e (Phase 3: persistent memory, Streamlit UI, mock LLM mode, latency instrumentation)
-=======
-llm_cache.db
->>>>>>> 9bc1d9e (Phase 3: persistent memory, Streamlit UI, mock LLM mode, latency instrumentation)
+checkpoints.db-shm
+checkpoints.db-wal
