@@ -1,4 +1,4 @@
-# Agentic RAG Portfolio
+# Agentic RAG 
 
 An evolving Retrieval-Augmented Generation (RAG) system built with **LangGraph** and **Gemini**, progressing from a basic RAG pipeline to a production-style multi-agent architecture.
 
