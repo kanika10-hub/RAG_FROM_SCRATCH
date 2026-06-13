@@ -14,11 +14,7 @@ Notes:
 """
 
 import streamlit as st
-
-from rag_graph import app as graph_app
-
-st.set_page_config(page_title="Agentic RAG")
-st.title(" Agentic RAG Chatbot")
+import os
 
 # -----------------------
 # SIDEBAR — thread management
@@ -28,6 +24,16 @@ if "threads" not in st.session_state:
 
 with st.sidebar:
     st.header("Conversations")
+    # in the sidebar block:
+    if os.getenv("MOCK_LLM", "0") == "1":
+        st.warning("🧪 MOCK mode — canned answers, no API calls")
+    else:
+        st.success("⚡ Live mode — Gemini 2.5 Flash")
+    from rag_graph import app as graph_app
+
+    st.set_page_config(page_title="Agentic RAG")
+    st.title(" Agentic RAG Chatbot")
+
 
     new_thread = st.text_input("New conversation id", placeholder="e.g. chat-2")
     if st.button("➕ Create") and new_thread.strip():
@@ -80,3 +86,7 @@ if question := st.chat_input("Ask about your documents, do math, or just chat…
         extra = (f" · retries: {result['retries']}"
                  if result["route"] == "retrieve" and result["retries"] else "")
         st.caption(f"route: {badge}{extra}")
+
+
+
+        

@@ -1,0 +1,116 @@
+[
+  {
+    "question": "according to the document, who founded Nexora Technologies and in which year?",
+    "expected_route": "retrieve",
+    "reference_answer": "Nexora Technologies was founded by Priya Sharma in 2019.",
+    "notes": "tests basic retrieval"
+  },
+  {
+    "question": "what was the total annual revenue of Nexora Technologies in 2025?",
+    "expected_route": "retrieve",
+    "reference_answer": "The total annual revenue in 2025 was ₹320 Crore.",
+    "notes": "tests numeric retrieval"
+  },
+  {
+    "question": "what is the remote work policy after the March 1, 2025 HR update, and who is eligible for it?",
+    "expected_route": "retrieve",
+    "reference_answer": "After March 1, 2025, eligible employees can work remotely up to 3 days per week. However, employees in critical infrastructure, security operations, or hardware deployment roles must be physically present at least 4 days per week, and probationary employees are generally not eligible unless explicitly approved.",
+    "notes": "tests multi-chunk reasoning across HR handbook and HR update"
+  },
+  {
+    "question": "describe the key capabilities of NexGuard including its 2025 upgrade features.",
+    "expected_route": "retrieve",
+    "reference_answer": "NexGuard provides real-time intrusion detection, AI-based risk scoring, automated alerts for suspicious behavior, and compliance reporting for ISO and GDPR. Its 2.0 version launched in March 2025 added predictive threat analysis using historical attack pattern recognition.",
+    "notes": "tests advanced product feature aggregation"
+  },
+  {
+    "question": "what were the three main focus areas and decisions made in the January 15, 2025 leadership meeting?",
+    "expected_route": "retrieve",
+    "reference_answer": "The meeting focused on international expansion (approving Singapore as the regional hub), hiring strategy (recruiting about 100 additional engineers over two quarters), and product enhancement (improving NexGuard dashboards with better visualization and faster incident response workflows).",
+    "notes": "tests meeting synthesis across multiple points"
+  },
+  {
+    "question": "which programming languages and tools are primarily used in Nexora’s engineering stack?",
+    "expected_route": "retrieve",
+    "reference_answer": "Nexora primarily uses Python for AI and backend services, Java for enterprise backend systems, and React.js for frontend development. It also uses PostgreSQL, MongoDB, Docker, Kubernetes, and Jenkins.",
+    "notes": "tests technical stack retrieval"
+  },
+  {
+    "question": "what are Nexora’s net profit and R&D expenditure for 2025?",
+    "expected_route": "retrieve",
+    "reference_answer": "The net profit after taxes was ₹58 Crore, and R&D expenditure was ₹60 Crore.",
+    "notes": "tests financial multi-field retrieval"
+  },
+  {
+    "question": "what is Nexora Technologies’ mission and core values?",
+    "expected_route": "retrieve",
+    "reference_answer": "The mission is to build intelligent systems that simplify business operations and enhance human productivity. Core values include continuous innovation in AI systems, transparency in internal operations, customer-centric product design, ethical use of artificial intelligence, and commitment to employee learning and growth.",
+    "notes": "tests conceptual + list aggregation"
+  },
+  {
+    "question": "what is 48 * 7 + 12",
+    "expected_route": "calculator",
+    "reference_answer": "348",
+    "notes": "basic arithmetic"
+  },
+  {
+    "question": "what is 1000 - 275 + 33",
+    "expected_route": "calculator",
+    "reference_answer": "758",
+    "notes": "basic arithmetic"
+  },
+  {
+    "question": "what is 36 / 6 + 14 * 3",
+    "expected_route": "calculator",
+    "reference_answer": "48",
+    "notes": "operator precedence test"
+  },
+  {
+    "question": "what bag should I get for college, black or pink?",
+    "expected_route": "direct_llm",
+    "reference_answer": null,
+    "notes": "casual preference question unrelated to document"
+  },
+  {
+    "question": "should I join Nexora Technologies or Google for my career?",
+    "expected_route": "direct_llm",
+    "reference_answer": null,
+    "notes": "career advice not derivable from document"
+  },
+  {
+    "question": "what color laptop should I buy for programming work?",
+    "expected_route": "direct_llm",
+    "reference_answer": null,
+    "notes": "subjective choice not in document"
+  },
+  {
+    "question": "is Nexora Technologies a good company to work for?",
+    "expected_route": "direct_llm",
+    "reference_answer": null,
+    "notes": "evaluative opinion not explicitly stated in document"
+  },
+  {
+    "question": "should I move to Singapore because Nexora is expanding there?",
+    "expected_route": "direct_llm",
+    "reference_answer": null,
+    "notes": "personal decision not supported by document"
+  },
+  {
+    "question": "what is Nexora Technologies' stock ticker symbol?",
+    "expected_route": "direct_llm",
+    "reference_answer": "I don't know",
+    "notes": "stock ticker is not mentioned in the document"
+  },
+  {
+    "question": "what is the salary of the CEO of Nexora Technologies?",
+    "expected_route": "direct_llm",
+    "reference_answer": "I don't know",
+    "notes": "CEO salary is not provided in the document"
+  },
+  {
+    "question": "what is the exact office address of Nexora Technologies in Delhi?",
+    "expected_route": "direct_llm",
+    "reference_answer": "I don't know",
+    "notes": "Delhi office location is not mentioned in the document"
+  }
+]

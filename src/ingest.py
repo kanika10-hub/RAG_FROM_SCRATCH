@@ -74,7 +74,7 @@ if __name__ == "__main__":
     print(f"\n📥 Ingesting PDFs from {folder}\n")
     docs = load_documents(folder)
     if not docs:
-        print("No PDFs found. Put document.pdf (and others) in data/raw/ first.")
+        print("No PDFs found. Put pdfs (and others) in data/raw/ first.")
         sys.exit(1)
     chunks = chunk_documents(docs)
     build_vectorstore(chunks)
